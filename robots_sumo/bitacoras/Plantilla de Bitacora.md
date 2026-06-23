@@ -2,77 +2,70 @@ NOTA: A medida que se realizan las bitácoras deberán ser subidas al repo corre
 
 **BITÁCORA DE PROYECTO – ROBOT SUMO**
 
-Equipo: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+Equipo: Team BOB
 
-Nombre del Robot: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+Nombre del Robot: B.O.B
 
-Capitán: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-
-Subcapitán: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+Capitán: Lucas Pierobon
+Subcapitán: Brandon Dylan Murcia Sasso
 
 Integrantes:
 
-1. ---
+1. Lucas Pierobon
 
-2. ---
+2. Brandon Dylan Murcia Sasso 
 
-3. ---
+3. Matías Sanchez
+
+4. Joaquin Toledo
 
 REGISTRO DE ACTIVIDADES
 
-Fecha: 
+Fecha: 23/06/26
 
 Integrantes presentes:
 
----
+1. Lucas Pierobon
 
----
+2. Brandon Dylan Murcia Sasso 
+
+3. Matías Sanchez
+
+4. Joaquin Toledo
 
 Objetivos de la jornada:
 
-* ---
+* Armar el Robot
 
-* ---
+* Ver la teoria de PWM
 
-* ---
+* Armar plantilla de bitacora
+
+* Armar documento con la lista de componentes
 
 Actividades realizadas:
 
----
+Armamos el robot 
 
----
+Vimos la teoria de PWM
 
----
+Armamos la plantilla de la bitacora
 
----
+Armamos el documento con la lista de componente
 
-Problemas encontrados:
 
----
+Problemas encontrados
 
----
 
----
 
 Soluciones implementadas o propuestas:
 
----
 
----
-
----
 
 Pruebas realizadas:
-
----
-
----
-
+no
 Resultados obtenidos:
-
----
-
----
+armamos exitosamente el robot 
 
 Fotografías, diagramas o evidencias:  
 (Adjuntar imágenes, capturas de pantalla o esquemas)
@@ -81,7 +74,7 @@ Fotografías, diagramas o evidencias:
 
 Tareas pendientes:
 
-* ---
+* ver la teoria de PWM
 
 * ---
 
