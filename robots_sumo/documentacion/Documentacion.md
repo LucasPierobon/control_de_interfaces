@@ -36,3 +36,8 @@ Componentes del robot :
 10\. tuerca doble : 4 
 
 11\. motores : 2  
+
+12\. puente H (L298N)
+
+13\. servo Sg-90
+
