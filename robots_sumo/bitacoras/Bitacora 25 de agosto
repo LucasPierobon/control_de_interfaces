@@ -1,0 +1,59 @@
+BITÁCORA DE PROYECTO – ROBOT SUMO
+
+Equipo: Team Bob
+Nombre del Robot: B.O.B
+Capitán: Lucas Pierobon
+Subcapitán: Brandon Sasso
+Integrantes:
+● Lucas Pierobon (Capitán)
+● Brandon Sasso (Subcapitán)
+● Joaquín Toledo
+● Matías Sánchez
+REGISTRO DE ACTIVIDADES
+Fecha: 25/08/2026
+Integrantes presentes: Lucas Pierobon, Brandon Sasso, Joaquín Toledo y Matías Sánchez (jornada de trabajo remoto, sin acceso al Laboratorio 1).
+Objetivos de la jornada
+● Organizarnos como equipo y ver cómo nos repartimos las tareas de acá en adelante.
+● Investigar cómo se programan motores de continua con puente H en C con la Pico W.
+● Ver qué es el PWM y cómo se usa junto con el puente H.
+● Pensar qué problemas nos pueden llegar a aparecer en el proyecto.
+Actividades realizadas
+Lucas juntó al equipo para charlar cómo nos vamos a organizar de acá a fin de año: qué hay que tener listo (la base, el circuito, el programa con PWM, el informe) y cómo nos repartimos el trabajo clase a clase. Como no teníamos laboratorio hoy, aprovechamos para investigar cada uno un tema distinto de los que pidió el profe.
+Problemas encontrados
+● No tuvimos acceso al Laboratorio 1, así que no pudimos probar nada con hardware real.
+● La documentación del SDK en C de la Pico W es bastante más densa que la de Arduino, cuesta más entenderla.
+● Casi todo lo que se encuentra en español está hecho en Arduino o MicroPython, no en C puro con el SDK.
+Soluciones implementadas o propuestas
+● Terminamos usando la documentación oficial de Raspberry Pi (Pico SDK y pico-examples) en vez de tutoriales de Arduino.
+● Quedó pendiente probar todo esto en la práctica apenas tengamos laboratorio de nuevo.
+Pruebas realizadas
+Ninguna, porque fue una jornada de investigación nomás y no tuvimos laboratorio.
+Resultados obtenidos
+1. Motores de continua con puente H en C (Pico W)
+El puente H (los más comunes son el L298N, el L293D o el TB6612FNG) sirve para cambiar el sentido de giro del motor invirtiendo la polaridad, y también para frenarlo o dejarlo quieto. Por lo general se manejan dos pines de dirección (IN1/IN2) más un pin de habilitación (EN). En C con el SDK de la Pico, los pines de dirección se configuran como salida con gpio_init(), gpio_set_dir() y gpio_put(), y según cuál esté en alto y cuál en bajo el motor gira para un lado o para el otro (si están iguales, frena). La velocidad no se toca ahí, se maneja aparte con PWM sobre el pin de habilitación.
+2. Qué es el PWM y cómo se usa con el puente H
+El PWM es básicamente prender y apagar una señal digital muy rápido, variando cuánto tiempo queda en alto dentro de cada ciclo (el duty cycle). Cuanto más tiempo pasa en alto, más voltaje promedio le llega al motor y más rápido gira. En el SDK de la Pico esto se maneja con hardware/pwm.h: se asocia el pin a un canal con pwm_gpio_to_slice_num(), se define el período con pwm_set_wrap(), el duty cycle con pwm_set_chan_level() y se activa con pwm_set_enabled(). Esa señal va al pin EN del puente H, mientras que los pines de dirección se manejan aparte, así que velocidad y sentido de giro son cosas independientes.
+3. Problemas que se nos pueden llegar a presentar
+● Que la fuente no alcance para los motores (piden más corriente de la que da la alimentación de la lógica), así que conviene separar la alimentación de motores y de la Pico.
+● Que falte tierra común entre la parte de potencia y la Pico, lo que puede hacer que se reinicie sola o lea cualquier cosa.
+● Que el puente H se caliente si lo exigimos mucho o usamos mal el PWM.
+● Que al robot le cueste responder rápido en el ring (que patine, pierda tracción, o los sensores de borde no detecten bien).
+● Que lo que investigamos en teoría no funcione igual en la práctica, eso solo lo vamos a poder probar en el laboratorio.
+Fotografías, diagramas o evidencias
+No hay fotos de esta jornada porque fue todo investigación desde el aula.
+Tareas pendientes
+● Armar la base del robot.
+● Conectar el circuito de potencia (puente H + motores).
+● Programar la parte de PWM y probar el control de velocidad.
+● Escribir el informe.
+ 
+APORTES INDIVIDUALES
+
+Integrante: Lucas Pierobon
+Tarea realizada: Organizó al equipo y definió cómo nos vamos a repartir el trabajo de acá en más. Investigó cómo se programan motores de continua con puente H en C con la Pico W.
+Integrante: Brandon Sasso
+Tarea realizada: Investigó qué es el PWM y cómo se integra al puente H y al programa de control de motores.
+Integrante: Joaquín Toledo
+Tarea realizada: Investigó cómo se usa el módulo WiFi de la Pico W.
+Integrante: Matías Sánchez
+Tarea realizada: Investigó qué problemas se nos pueden llegar a presentar durante el proyecto.
